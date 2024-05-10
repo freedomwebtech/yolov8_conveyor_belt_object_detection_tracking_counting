@@ -22,7 +22,6 @@ my_file = open("coco1.txt", "r")
 data = my_file.read()
 class_list = data.split("\n") 
 
-area = [(27, 417), (16, 456), (1015, 451), (992, 417)]
 
 count = 0
 
@@ -60,7 +59,7 @@ while True:
         cvzone.putTextRect(frame,f'{id}',(x4,y4),1,1)        
 
       
-#    cv2.polylines(frame, [np.array(area, np.int32)], True, (255, 0, 0), 2)
+
     cv2.imshow("RGB", frame)
     if cv2.waitKey(1) & 0xFF == 27:
         break
